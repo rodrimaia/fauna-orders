@@ -1,30 +1,11 @@
 import React, { useState, FunctionComponent } from 'react';
 import { Order } from '../types';
 import ProductsTable from '../components/productsTable';
+import StatusTag from '../components/statusTag';
 
 interface CardOrderProps {
   order: Order;
 }
-
-const StatusTag = ({ status }) => {
-  const statusColor =
-    status === 'approved'
-      ? 'success'
-      : status === 'pending'
-      ? 'warning'
-      : 'danger';
-
-  return (
-    <span className={`box-line-status is-size-7-mobile tag is-${statusColor}`}>
-      {status}
-      <style jsx>{`
-        .box-line-status {
-          text-transform: capitalize;
-        }
-      `}</style>
-    </span>
-  );
-};
 
 const OrderCard: FunctionComponent<CardOrderProps> = ({ order }) => {
   const [isHidden, setIsHidden] = useState(true);
