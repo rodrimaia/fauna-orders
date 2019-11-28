@@ -4,6 +4,7 @@ import useSWR from 'swr';
 import Nav from '../components/nav';
 import OrderCard from '../components/orderCard';
 import Head from 'next/head';
+import Loader from '../components/loader';
 import { Order } from '../types';
 
 interface EndpointResponse {
@@ -26,6 +27,10 @@ const Home = () => {
           href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
         />
         <link rel="stylesheet" href="https://use.typekit.net/mhv7bxw.css" />
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/bulma-pageloader/dist/css/bulma-pageloader.min.css"
+        />
         <script
           defer
           src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
@@ -35,7 +40,7 @@ const Home = () => {
       <Nav />
 
       {error && <div> Failed to load </div>}
-      {!error && !data && <div> Loading...</div>}
+      {!error && !data && <Loader />}
       {data && (
         <div className="section">
           <div className="container">

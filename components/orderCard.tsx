@@ -55,7 +55,9 @@ const OrderCard: FunctionComponent<CardOrderProps> = ({ order }) => {
             </table>
             <hr className="hr" />
             <p>Ship To</p>
-            <p className="has-text-weight-light" style={{marginBottom: 0}}>{order.shipAddress.street}</p>
+            <p className="has-text-weight-light" style={{ marginBottom: 0 }}>
+              {order.shipAddress.street}
+            </p>
             <p className="has-text-weight-light">
               {order.shipAddress.city} {order.shipAddress.state}{' '}
               {order.shipAddress.zipCode}
@@ -67,8 +69,8 @@ const OrderCard: FunctionComponent<CardOrderProps> = ({ order }) => {
       <style jsx>{`
         .box {
           cursor: pointer;
-border-left: solid;
-    border-left-color: #6474af;
+          border-left: solid;
+          border-left-color: #6474af;
         }
         .box-line {
           display: flex;
@@ -77,7 +79,7 @@ border-left: solid;
         }
         .box-line-name {
           width: 200px;
-color: #6474af
+          color: #6474af;
         }
         .box-line products {
         }
