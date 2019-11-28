@@ -18,6 +18,7 @@ const StatusTag: FunctionComponent<StatusTagProps> = ({ status }) => {
       <style jsx>{`
         .box-line-status {
           text-transform: capitalize;
+          margin-top: 2px;
         }
       `}</style>
     </span>

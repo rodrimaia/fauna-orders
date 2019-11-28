@@ -61,6 +61,11 @@ const OrderCard: FunctionComponent<CardOrderProps> = ({ order }) => {
         }
         .box-line-name {
           color: #6474af;
+          flex-grow: 0.2;
+        }
+        .box-line-products {
+        }
+        span {
         }
       `}</style>
     </div>
