@@ -1,10 +1,16 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import useSWR from 'swr';
+import Nav from '../components/nav';
 import Head from 'next/head';
-import { Order } from '../types';
+import { Order, Line } from '../types';
 
-const fetcher = url => axios.post(url);
+interface EndpointResponse {
+  data: Order[];
+}
+
+const fetcher = (url: string): Promise<AxiosResponse<EndpointResponse>> =>
+  axios.post(url);
 
 const Home = () => {
   const { data, error } = useSWR('/api/orders', fetcher);
@@ -24,6 +30,8 @@ const Home = () => {
           src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
         ></script>
       </Head>
+
+      <Nav />
 
       {error && <div> Failed to load </div>}
       {!error && !data && <div> Loading...</div>}
@@ -75,7 +83,7 @@ const Card = ({ order }) => {
         <span className="box-line-products has-text-grey has-text-weight-light is-size-7">
           {order.line.length} Products
         </span>
-        <span className="box-line-status has-text-grey has-text-weight-light">
+        <span className="box-line-status has-text-grey has-text-weight-light is-size-7">
           {order.status}
         </span>
         <span className="box-line-price has-text-primary is-size-4">
@@ -98,7 +106,7 @@ const Card = ({ order }) => {
                 </tr>
               </thead>
               <tbody>
-                {order.line.map(l => (
+                {order.line.map((l: Line) => (
                   <tr key={l.product.name}>
                     <td>{l.product.name}</td>
                     <td>{l.product.description}</td>
