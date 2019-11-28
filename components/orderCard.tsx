@@ -15,14 +15,14 @@ const OrderCard: FunctionComponent<CardOrderProps> = ({ order }) => {
       }}
     >
       <div className="box-line">
-        <span className="box-line-name">{order.customer.name}</span>
-        <span className="box-line-products has-text-grey has-text-weight-light">
+        <span className="box-line-name is-size-7-mobile">{order.customer.name}</span>
+        <span className="box-line-products has-text-grey has-text-weight-light is-size-7-mobile">
           {order.line.length} Products
         </span>
-        <span className="box-line-status has-text-grey has-text-weight-light">
+        <span className="box-line-status has-text-grey has-text-weight-light is-size-7-mobile">
           {order.status}
         </span>
-        <span className="box-line-price has-text-primary is-size-4">
+        <span className="box-line-price has-text-primary is-size-4 is-size-7-mobile">
           {order.totalPrice.toFixed(2)}
         </span>
         <i className={`fa fa-angle-${isHidden ? 'down' : 'up'}`}></i>
@@ -31,6 +31,7 @@ const OrderCard: FunctionComponent<CardOrderProps> = ({ order }) => {
         <div className="content">
           <div className="container">
             <p>Products </p>
+            <div className="table-container">
             <table className="table is-narrow is-hoverable is-striped">
               <thead>
                 <tr>
@@ -53,6 +54,7 @@ const OrderCard: FunctionComponent<CardOrderProps> = ({ order }) => {
                 ))}
               </tbody>
             </table>
+            </div>
             <hr className="hr" />
             <p>Ship To</p>
             <p className="has-text-weight-light" style={{ marginBottom: 0 }}>
@@ -78,7 +80,6 @@ const OrderCard: FunctionComponent<CardOrderProps> = ({ order }) => {
           align-items: center;
         }
         .box-line-name {
-          width: 200px;
           color: #6474af;
         }
         .box-line products {
