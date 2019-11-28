@@ -11,11 +11,19 @@
     "react-hooks",
     "@typescript-eslint/eslint-plugin"
   ],
-  "extends": ["eslint:recommended","plugin:@typescript-eslint/recommended", "plugin:react/recommended", "plugin:prettier/recommended"],
+  "extends": ["eslint:recommended",
+              "plugin:@typescript-eslint/recommended",
+              "plugin:@typescript-eslint/recommended-requiring-type-checking",
+              "plugin:react/recommended",
+              "plugin:prettier/recommended",
+              "prettier",
+              "prettier/@typescript-eslint"
+             ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
     "ecmaVersion": 2017,
-    "sourceType": "module"
+    "sourceType": "module",
+    "project": "./tsconfig.json"
   },
   "settings": {
     "react": {
@@ -25,6 +33,7 @@
   "rules": {
     "linebreak-style": ["error", "unix"],
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "warn"
+    "react-hooks/exhaustive-deps": "warn",
+    "@typescript-eslint/no-floating-promises": "error"
   }
 }

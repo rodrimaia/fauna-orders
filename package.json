@@ -6,7 +6,7 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint --ext .js,.jsx,.ts --fix . && echo 'Lint complete.'",
+    "lint": "eslint --ext .ts,.tsx --fix . && echo 'Lint complete.'",
     "test": "jest",
     "watch": "jest --watch"
   },

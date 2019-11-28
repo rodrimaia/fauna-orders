@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es2019",
     "lib": [
       "dom",
       "dom.iterable",
@@ -20,10 +20,6 @@
   },
   "exclude": [
     "node_modules",
-    "**/*.spec.ts",
-    "**/*.spec.tsx",
-    "**/*.test.ts",
-    "**/*.test.tsx"
   ],
   "include": [
     "next-env.d.ts",

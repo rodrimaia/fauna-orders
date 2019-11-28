@@ -1,4 +1,4 @@
-import axios from 'axios';
+import axios, { AxiosResponse } from 'axios';
 import { Order, Line } from '../types';
 
 const secret = process.env.FAUNADB_SECRET_KEY;
@@ -35,12 +35,12 @@ const query = `{
     }
 }`;
 
-const calculateLine = (line): Line => ({
+const calculateLine = (line: FaunaLine): Line => ({
   ...line,
-  total: parseFloat(line.quantity) * parseFloat(line.price)
+  total: line.quantity * line.price
 });
 
-export const calculateFields = (faunaResponse: any[]): Order[] => {
+export const calculateFields = (faunaResponse: FaunaOrder[]): Order[] => {
   return faunaResponse.map(orderResponse => {
     const lines = orderResponse.line.map(calculateLine);
     return {
@@ -60,5 +60,50 @@ export const calculateFields = (faunaResponse: any[]): Order[] => {
 export const loadOrders = async (): Promise<Order[]> => {
   return axios
     .post('', { query })
-    .then(response => calculateFields(response.data.data.allOrders.data));
+    .then((response: AxiosResponse<FaunaResponse>) =>
+      calculateFields(response.data.data.allOrders.data)
+    );
 };
+
+interface FaunaResponse {
+  data: Data;
+}
+
+interface Data {
+  allOrders: AllOrders;
+}
+
+interface AllOrders {
+  data: FaunaOrder[];
+}
+
+interface FaunaOrder {
+  _id: string;
+  status: string;
+  shipAddress: ShipAddress;
+  line: FaunaLine[];
+  customer: Customer;
+}
+
+interface Customer {
+  firstName: string;
+  lastName: string;
+}
+
+interface FaunaLine {
+  product: FaunaProduct;
+  quantity: number;
+  price: number;
+}
+
+interface FaunaProduct {
+  name: string;
+  description: string;
+}
+
+interface ShipAddress {
+  street: string;
+  city: string;
+  zipCode: string;
+  state: string;
+}
