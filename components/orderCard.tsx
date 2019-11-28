@@ -16,10 +16,10 @@ const OrderCard: FunctionComponent<CardOrderProps> = ({ order }) => {
     >
       <div className="box-line">
         <span className="box-line-name">{order.customer.name}</span>
-        <span className="box-line-products has-text-grey has-text-weight-light is-size-7">
+        <span className="box-line-products has-text-grey has-text-weight-light">
           {order.line.length} Products
         </span>
-        <span className="box-line-status has-text-grey has-text-weight-light is-size-7">
+        <span className="box-line-status has-text-grey has-text-weight-light">
           {order.status}
         </span>
         <span className="box-line-price has-text-primary is-size-4">
@@ -67,6 +67,8 @@ const OrderCard: FunctionComponent<CardOrderProps> = ({ order }) => {
       <style jsx>{`
         .box {
           cursor: pointer;
+border-left: solid;
+    border-left-color: #6474af;
         }
         .box-line {
           display: flex;
@@ -75,6 +77,7 @@ const OrderCard: FunctionComponent<CardOrderProps> = ({ order }) => {
         }
         .box-line-name {
           width: 200px;
+color: #6474af
         }
         .box-line products {
         }
