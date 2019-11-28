@@ -31,10 +31,10 @@ const OrderCard: FunctionComponent<CardOrderProps> = ({ order }) => {
         <div className="content">
           <div className="container">
             <p>Products </p>
-            <table className="table">
+            <table className="table is-narrow is-hoverable is-striped">
               <thead>
                 <tr>
-                  <th>Product</th>
+                  <th>Name</th>
                   <th>Description</th>
                   <th>Quantity</th>
                   <th>Price</th>
@@ -43,7 +43,7 @@ const OrderCard: FunctionComponent<CardOrderProps> = ({ order }) => {
               </thead>
               <tbody>
                 {order.line.map((l: Line) => (
-                  <tr key={l.product.name}>
+                  <tr className="has-text-weight-light" key={l.product.name}>
                     <td>{l.product.name}</td>
                     <td>{l.product.description}</td>
                     <td>{l.quantity}</td>
@@ -55,8 +55,8 @@ const OrderCard: FunctionComponent<CardOrderProps> = ({ order }) => {
             </table>
             <hr className="hr" />
             <p>Ship To</p>
-            <p>{order.shipAddress.street}</p>
-            <p>
+            <p className="has-text-weight-light" style={{marginBottom: 0}}>{order.shipAddress.street}</p>
+            <p className="has-text-weight-light">
               {order.shipAddress.city} {order.shipAddress.state}{' '}
               {order.shipAddress.zipCode}
             </p>
