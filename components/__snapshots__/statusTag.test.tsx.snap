@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`print the status passed as param 1`] = `
+<span
+  class="jsx-2445842882 box-line-status is-size-7-mobile tag is-danger"
+>
+  status
+</span>
+`;

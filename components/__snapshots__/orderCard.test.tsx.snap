@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`print the Order passed as param 1`] = `
+<div
+  class="jsx-733811595 box is-fullwidth"
+>
+  <div
+    class="jsx-733811595 box-line"
+  >
+    <span
+      class="jsx-733811595 box-line-name is-size-7-mobile"
+    >
+      customerName
+    </span>
+    <span
+      class="jsx-733811595 box-line-products has-text-grey has-text-weight-light is-size-7-mobile"
+    >
+      1
+       Products
+    </span>
+    <span
+      class="jsx-2445842882 box-line-status is-size-7-mobile tag is-warning"
+    >
+      processing
+    </span>
+    <span
+      class="jsx-733811595 box-line-price has-text-primary is-size-4 is-size-7-mobile"
+    >
+      0.00
+    </span>
+    <span
+      class="jsx-733811595 icon"
+    >
+      <i
+        class="jsx-733811595 material-icons"
+      >
+        keyboard_arrow_down
+      </i>
+    </span>
+  </div>
+  <div
+    class="jsx-733811595 card-content is-hidden"
+  >
+    <div
+      class="jsx-733811595 content"
+    >
+      <div
+        class="container"
+      >
+        <p>
+          Products 
+        </p>
+        <div
+          class="table-container"
+        >
+          <table
+            class="table is-narrow is-hoverable is-striped"
+          >
+            <thead>
+              <tr>
+                <th>
+                  Name
+                </th>
+                <th>
+                  Description
+                </th>
+                <th>
+                  Quantity
+                </th>
+                <th>
+                  Price
+                </th>
+                <th>
+                  Subtotal
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr
+                class="has-text-weight-light"
+              >
+                <td>
+                  product
+                </td>
+                <td>
+                  description
+                </td>
+                <td>
+                  1
+                </td>
+                <td>
+                  2.00
+                </td>
+                <td>
+                  2.00
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+      <hr
+        class="jsx-733811595 hr"
+      />
+      <p
+        class="jsx-733811595"
+      >
+        Ship To
+      </p>
+      <p
+        class="jsx-733811595 has-text-weight-light"
+        style="margin-bottom: 0px;"
+      >
+        test
+      </p>
+      <p
+        class="jsx-733811595 has-text-weight-light"
+      >
+        test
+         
+        test
+         
+        test
+      </p>
+    </div>
+  </div>
+</div>
+`;

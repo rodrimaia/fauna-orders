@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`print the table passed as param 1`] = `
+<div
+  class="container"
+>
+  <p>
+    Products 
+  </p>
+  <div
+    class="table-container"
+  >
+    <table
+      class="table is-narrow is-hoverable is-striped"
+    >
+      <thead>
+        <tr>
+          <th>
+            Name
+          </th>
+          <th>
+            Description
+          </th>
+          <th>
+            Quantity
+          </th>
+          <th>
+            Price
+          </th>
+          <th>
+            Subtotal
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr
+          class="has-text-weight-light"
+        >
+          <td>
+            product Name
+          </td>
+          <td>
+            description
+          </td>
+          <td>
+            1
+          </td>
+          <td>
+            2.00
+          </td>
+          <td>
+            2.00
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+`;
