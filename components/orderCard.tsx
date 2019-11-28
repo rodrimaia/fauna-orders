@@ -27,7 +27,11 @@ const OrderCard: FunctionComponent<CardOrderProps> = ({ order }) => {
         <span className="box-line-price has-text-primary is-size-4 is-size-7-mobile">
           {order.totalPrice.toFixed(2)}
         </span>
-        <i className={`fa fa-angle-${isHidden ? 'down' : 'up'}`}></i>
+        <span className="icon">
+          <i className="material-icons">{`keyboard_arrow_${
+            isHidden ? 'down' : 'up'
+          }`}</i>
+        </span>
       </div>
       <div className={`card-content ${isHidden ? 'is-hidden' : ''}`}>
         <div className="content">

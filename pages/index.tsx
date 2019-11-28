@@ -22,19 +22,15 @@ const Home = () => {
       <Head>
         <title>Home</title>
         <link rel="icon" href="/favicon.ico" />
-        <link
-          rel="stylesheet"
-          href="https://cdn.jsdelivr.net/npm/bulma@0.8.0/css/bulma.min.css"
-        />
-        <link rel="stylesheet" href="https://use.typekit.net/mhv7bxw.css" />
+        <link rel="stylesheet" href="/bulma.min.css" />
         <link
           rel="stylesheet"
           href="https://cdn.jsdelivr.net/npm/bulma-extensions@6.2.7/bulma-pageloader/dist/css/bulma-pageloader.min.css"
         />
-        <script
-          defer
-          src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
-        ></script>
+        <link
+          href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet"
+        />
       </Head>
 
       <Nav />
