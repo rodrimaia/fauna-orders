@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import axios from 'axios';
 import useSWR from 'swr';
 import Head from 'next/head';
-import Nav from '../components/nav';
 import { Order } from '../types';
 
 const fetcher = url => axios.post(url);
@@ -25,8 +24,6 @@ const Home = () => {
           src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"
         ></script>
       </Head>
-
-      <Nav />
 
       {error && <div> Failed to load </div>}
       {!error && !data && <div> Loading...</div>}
