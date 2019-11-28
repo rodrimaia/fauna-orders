@@ -26,4 +26,4 @@ jobs:
         npm run lint
       env:
         CI: true
-        FAUNA_DB_SECRET_KEY: {{ secrets.FAUNA_DB_SECRET_KEY }}
+        FAUNADB_SECRET_KEY: ${{ secrets.FAUNADB_SECRET_KEY }}
