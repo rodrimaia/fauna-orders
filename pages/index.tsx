@@ -41,7 +41,7 @@ const Home = () => {
 
       {error && <div> Failed to load </div>}
       {!error && !data && <Loader />}
-      {data && (
+      {!error && data && (
         <div className="section">
           <div className="container">
             <h4 className="title is-6 has-text-weight-light">All Orders</h4>

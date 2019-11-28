@@ -6,6 +6,26 @@ interface CardOrderProps {
   order: Order;
 }
 
+const StatusTag = ({ status }) => {
+  const statusColor =
+    status === 'approved'
+      ? 'success'
+      : status === 'pending'
+      ? 'warning'
+      : 'danger';
+
+  return (
+    <span className={`box-line-status is-size-7-mobile tag is-${statusColor}`}>
+      {status}
+      <style jsx>{`
+        .box-line-status {
+          text-transform: capitalize;
+        }
+      `}</style>
+    </span>
+  );
+};
+
 const OrderCard: FunctionComponent<CardOrderProps> = ({ order }) => {
   const [isHidden, setIsHidden] = useState(true);
   return (
@@ -22,9 +42,7 @@ const OrderCard: FunctionComponent<CardOrderProps> = ({ order }) => {
         <span className="box-line-products has-text-grey has-text-weight-light is-size-7-mobile">
           {order.line.length} Products
         </span>
-        <span className="box-line-status has-text-grey has-text-weight-light is-size-7-mobile">
-          {order.status}
-        </span>
+        <StatusTag status={order.status} />
         <span className="box-line-price has-text-primary is-size-4 is-size-7-mobile">
           {order.totalPrice.toFixed(2)}
         </span>
@@ -58,8 +76,6 @@ const OrderCard: FunctionComponent<CardOrderProps> = ({ order }) => {
         }
         .box-line-name {
           color: #6474af;
-        }
-        .box-line products {
         }
       `}</style>
     </div>
