@@ -7,8 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint --ext .ts,.tsx --fix . && echo 'Lint complete.'",
+    "lint:ci": "eslint --ext .ts,.tsx .",
     "test": "jest",
-    "watch": "jest --watch"
+    "watch": "jest --watch",
+    "cypress": "cypress open",
+    "cypress:run":  "cypress run",
+    "ci": "start-server-and-test start http://localhost:3000 cypress:run"
   },
   "dependencies": {
     "@types/jest": "^24.0.23",
@@ -25,12 +29,14 @@
     "@types/react": "^16.9.13",
     "@typescript-eslint/eslint-plugin": "^2.9.0",
     "@typescript-eslint/parser": "^2.9.0",
+    "cypress": "^3.7.0",
     "eslint": "^6.7.1",
     "eslint-config-prettier": "^6.7.0",
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.3.0",
     "prettier": "^1.19.1",
+    "start-server-and-test": "^1.10.6",
     "typescript": "^3.7.2"
   }
 }
