@@ -72,7 +72,7 @@ Zeit-SWR was also used to provide a quick client cache control, but also for the
 
 ## CI
 
-[](https://github.com/rodrigomaia17/fauna-orders/workflows/Node%20CI/badge.svg)
+![Github Actions](https://github.com/rodrigomaia17/fauna-orders/workflows/Node%20CI/badge.svg)
 
 I am experimenting with Github Actions to run tests after every push to master. A possible next improvement would be having it deploying to Zeit after a successful run. 
 
