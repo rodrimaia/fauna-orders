@@ -1,13 +1,13 @@
 # Fauna Orders
 https://fauna-orders.rodrigomaia.me
 
-Fauna Orders is a simple application created to connect to a Fauna Database and show its content.  Its architecture contains two mains parts: 
+Fauna Orders is a simple application created to connect to a Fauna Database and show its contents.  Its architecture contains two mains parts: 
 A web service to provide Orders information;
 A frontend app that connects to the web service and shows its data. 
 Both parts were made using Next.js. It was a straightforward decision since I was planning to use Zeit as a hosting provider, and I believe Next is the natural framework option for it. Next.Js provides an excellent solution not only to build static react applications but also to create/maintain Serverless functions deployed on Zeit. 
 
 ## Web Service
-Written in Node and Typescript, the Orders endpoint is a serverless function that uses GraphQL to connect to FaunaDB. FQL was a great option, although since I had a time constraint, I tried to go with a more familiar protocol for connecting to the database. 
+Written in Node and Typescript, the Orders endpoint is a serverless function that uses GraphQL to connect to FaunaDB. FQL was a great option, although since I had a time constraints, I tried to go with a more familiar protocol for connecting to the database. 
 
 I am using a cache-control directive, which applies edge caching on subsequent (in a 30s timeframe) requests to the endpoint. It does not only speed up client requests but also prevents too much resource utilization on the serverless function.
 
