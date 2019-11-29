@@ -5,6 +5,7 @@ import { Order } from '../../types';
 export default async (_: NowRequest, response: NowResponse) => {
   try {
     const data: Order[] = await loadOrders();
+    response.setHeader('cache-control', 's-maxage=30, stale-while-revalidate');
     response.status(200).json({ data: data });
   } catch (e) {
     // something went wrong
