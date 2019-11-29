@@ -35,7 +35,7 @@ const OrderCard: FunctionComponent<CardOrderProps> = ({ order }) => {
       </div>
       <div className={`card-content ${isHidden ? 'is-hidden' : ''}`}>
         <div className="content">
-          <ProductsTable lines={order.line} />
+          <ProductsTable rows={order.line} />
           <hr className="hr" />
           <p>Ship To</p>
           <p className="has-text-weight-light" style={{ marginBottom: 0 }}>

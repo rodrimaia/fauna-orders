@@ -48,7 +48,7 @@ exports[`print the Order passed as param 1`] = `
         class="container"
       >
         <p>
-          Products 
+          Products
         </p>
         <div
           class="table-container"

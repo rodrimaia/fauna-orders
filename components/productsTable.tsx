@@ -2,13 +2,13 @@ import React, { FunctionComponent } from 'react';
 import { Line } from '../types';
 
 interface ProductsTableProps {
-  lines: Line[];
+  rows: Line[];
 }
 
-const ProductsTable: FunctionComponent<ProductsTableProps> = ({ lines }) => {
+const ProductsTable: FunctionComponent<ProductsTableProps> = ({ rows }) => {
   return (
     <div className="container">
-      <p>Products </p>
+      <p>Products</p>
       <div className="table-container">
         <table className="table is-narrow is-hoverable is-striped">
           <thead>
@@ -21,7 +21,7 @@ const ProductsTable: FunctionComponent<ProductsTableProps> = ({ lines }) => {
             </tr>
           </thead>
           <tbody>
-            {lines.map((l: Line) => (
+            {rows.map((l: Line) => (
               <tr className="has-text-weight-light" key={l.product.name}>
                 <td>{l.product.name}</td>
                 <td>{l.product.description}</td>

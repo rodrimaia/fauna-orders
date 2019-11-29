@@ -2,8 +2,8 @@
   "name": "fauna-orders",
   "version": "0.1.0",
   "private": true,
-  "engines" : {
-    "node" : ">=12.13.1"
+  "engines": {
+    "node": ">=12.13.1"
   },
   "scripts": {
     "dev": "next dev",
@@ -18,9 +18,7 @@
     "ci": "start-server-and-test start http://localhost:3000 cypress:run"
   },
   "dependencies": {
-    "@types/jest": "^24.0.23",
     "axios": "^0.19.0",
-    "jest": "^24.9.0",
     "next": "9.1.4",
     "react": "16.12.0",
     "react-dom": "16.12.0",
@@ -30,6 +28,7 @@
     "@now/node": "^1.2.0",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
+    "@types/jest": "^24.0.23",
     "@types/node": "^12.12.14",
     "@types/react": "^16.9.13",
     "@typescript-eslint/eslint-plugin": "^2.9.0",
@@ -40,6 +39,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "eslint-plugin-react-hooks": "^2.3.0",
+    "jest": "^24.9.0",
     "prettier": "^1.19.1",
     "start-server-and-test": "^1.10.6",
     "typescript": "^3.7.2"

@@ -4,7 +4,7 @@ import ProductsTable from './productsTable';
 import { Line } from '../types';
 import '@testing-library/jest-dom/extend-expect';
 
-const lines: Line[] = [
+const rows: Line[] = [
   {
     product: {
       name: 'product Name',
@@ -17,7 +17,7 @@ const lines: Line[] = [
 ];
 
 test('print the table passed as param', () => {
-  const { getByText, container } = render(<ProductsTable lines={lines} />);
+  const { getByText, container } = render(<ProductsTable rows={rows} />);
 
   expect(getByText('product Name')).toBeVisible();
   expect(container.firstChild).toMatchSnapshot();
