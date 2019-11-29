@@ -22,7 +22,7 @@ Or to run a production build:
 - `yarn build`
 - `yarn start`
 
-The application will be available in the following urls: 
+The application will be available in the following URLs: 
 
 - Web app: https://localhost:3000/
 - Endpoint: https://localhost:3000/api/orders
