@@ -37,22 +37,22 @@ I intend to follow the best practices for using a JAM stack. The app is rendered
 
 Zeit-SWR was also used to provide a quick client cache control, but also for the request management and error/loading controls. 
 
-# CI
+## CI
 [](https://github.com/rodrigomaia17/fauna-orders/workflows/Node%20CI/badge.svg)
 I am experimenting with Github Actions to run tests after every push to master. A possible next improvement would be having it deploying to Zeit after a successful run. 
 
-# Hosting
+## Hosting
 
 The full solution is being deployed to Zeit using Now since the first commit. 
 Endpoint: https://fauna-orders.rodrigomaia.me/api/orders
 Web app: https://fauna-orders.rodrigomaia.me
 
-# Testing
+## Testing
 The tests for this application follow unit and e2e strategies. 
 
-## Unit
+### Unit
 The react components have mostly presentational behavior, so I am testing how props change the rendered DOM, using proper DOM-based assertions (using Jest) and also snapshot testing.
 The Serverless function also has test coverage for all the data transformations it does between the Graphql response and the JSON returned for its consumers. 
 
-## E2E
+### E2E
 I've used Cypress to test a full scenario of opening the home page, seeing the orders being loaded, and clicking of one of them and seeing its details. 
