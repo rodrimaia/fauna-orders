@@ -8,6 +8,25 @@ Fauna Orders is a simple application created to connect to a Fauna Database and 
 
 Both parts were made using Next.js. It was a straightforward decision since I was planning to use Zeit as a hosting provider, and I believe Next is the natural framework option for it. Next.Js provides an excellent solution not only to build static react applications but also to create/maintain Serverless functions deployed on Zeit. 
 
+## How to run it
+
+- `export FAUNADB_SECRET_KEY={your secret key}`
+
+To run development server: 
+
+- `yarn install` or `npm i`
+- `yarn run dev` or `npm run dev`
+
+Or to run a production build:
+
+- `yarn build`
+- `yarn start`
+
+The application will be available in the following urls: 
+
+- Web app: https://localhost:3000/
+- Endpoint: https://localhost:3000/api/orders
+
 ## Web Service
 Written in Node and Typescript, the Orders endpoint is a serverless function that uses GraphQL to connect to FaunaDB. FQL was a great option, although since I had a time constraints, I tried to go with a more familiar protocol for connecting to the database. 
 
